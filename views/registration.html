@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--  
+    <title>{{title}}</title>
+-->
+    <title>Money Ωmega</title>
+        <!-- ICON for Browser tab -->
+    <link rel="icon" type="image/png" href="../public/images/budget-icon2.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="../public/images/budget-icon2.png" sizes="32x32"/>
+
+    <link rel='stylesheet' href='../public/stylesheets/registration.css' />
+  </head>
+  <body>
+
+    <!-- NEED TO FIX: Theres small little gap on nav when hover-->
+    <div class="topnav">
+        <a class="active" href="#home"><img class ="logo" src ="../public/images/budget-icon2.png" alt="Financial Logo" width= "20px"/></a>
+        <a href="#expense">Expense Tracker</a>
+        <a href="#budget">Budget</a>
+        <a href="#Account">Account Profile</a>
+        <a href="#Notifiy">Notifications</a>
+        <a href="#Notifiy">Bill + Tips Splitter</a>
+        <a href="#Recommend">Recommendations</a>
+        <a href="#tutorial">Tutorials</a>
+    </div> <!-- these href are not set yet (not sure if do it this way or redirect like the labs) -->
+
+    <form class="registerForm" method="post">
+            <h1> Register</h1>
+            <br>
+            <input class = "input-field" name="firstname" placeholder="Enter first name">
+            <br>
+            <input class = "input-field" name="lastname" placeholder="Enter last name">
+            <br>
+            <input class = "input-field" name="email" placeholder="Enter email" type ="email">
+            <br>            
+            <input class = "input-field" name="username" placeholder="Enter username">
+            <br>
+            <input class = "input-field" name="password" placeholder="Enter password" type = "password">
+            <br>
+    
+        <div class="sub-button"> 
+            <!--
+            <input class="input-button" name="login" value="log in" type ="submit">
+            -->
+            <input class="input-button" name="register" value="Register" type ="submit">
+        </div>
+        <br style="clear:both;" >
+    
+    </form>
+
+</body>
+</html>

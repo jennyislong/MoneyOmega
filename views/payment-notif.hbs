@@ -1,0 +1,128 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+  <div class="topnav">
+    <a class="active" href="/homePage">Home</a>
+    <a href="/expense-tracker">Expense Tracker</a>
+    <a href="/budget">Budget</a>
+    <a href="/accountProfile">Account Profile</a>
+    <a href="/payment-notif">Notifications</a>
+    <a href="/BillTipSplitter">Bill + Tips Splitter</a>
+    <a href="/recommendation">Recommendations</a>
+    <a href="/Tutorial">Tutorials</a>
+        <form method="post" action="logout">
+        <input style="margin-top:15px;" type="submit" value="log out">
+        </form>
+</div>
+
+<h1
+    style="color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+    Payment Reminder</h1>
+<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    Current Date and Time is <span id='date-time'></span>.</p>
+<script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML = dt;
+</script>
+
+
+<div class="calendar">
+
+    <div class="col leftCol">
+        <div class="content">
+            <h1 class="date">Add New Payment</h1>
+
+            <div class="notes">
+                <form method="post">
+                    <p>
+                        <input id="title" name="title" type="text" value="" placeholder="Enter payment title" />
+
+                        <input id="date" name="date" type="date" value="" placeholder="Enter payment date" />
+                        <input name="time" type="time" value="" placeholder="Enter payment time" />
+
+                        <button name="save" value="Save" type="submit">Save Reminder</button>
+                    </p>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col leftCol">
+        <div class="content">
+            <h1 class="date">Upcoming Payments</h1>
+
+            <div class="notes">
+                <form method="post">
+                    <ul style="color: white;">
+                        {{#each notif}}
+                        <li>{{this.title}} </li>
+                        <li>{{this.date}} </li>
+                        <li>{{this.time}} <button name="del" value="{{this.title}}" type="submit">Remove
+                                Reminder</button></li>
+                        <br>
+                        {{/each}}
+
+                    </ul>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col rightCol">
+        <div class="content">
+
+            <h2 class="year">
+                <script>document.write(new Date().getFullYear())</script>
+            </h2>
+
+            <ul class="months">
+                <script>
+                    for (var _i = 1; _i <= 12; _i += 1) {
+                        _addClass = '';
+                        var dtToday = new Date();
+                        var month = dtToday.getMonth() + 1;
+                        if (_i === month) {
+                            _addClass = ' class="selected"';
+                        }
+                        document.write('<li><a href="#" title="' + _i + '" data-value="' + _i + '"' + _addClass + '>' + _i + '</a></li>');
+
+                    }
+                </script>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="weekday">
+                <li><a href="#" title="Mon" data-value="1">Mon</a></li>
+                <li><a href="#" title="Tue" data-value="2">Tue</a></li>
+                <li><a href="#" title="Wed" data-value="3">Wed</a></li>
+                <li><a href="#" title="Thu" data-value="4">Thu</a></li>
+                <li><a href="#" title="Fri" data-value="5">Fri</a></li>
+                <li><a href="#" title="Say" data-value="6">Sat</a></li>
+                <li><a href="#" title="Sun" data-value="7">Sun</a></li>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="days">
+                <script>
+                    for (var _i = 1; _i <= 31; _i += 1) {
+                        var _addClass = '';
+                        var dtToday = new Date();
+                        var month = dtToday.getMonth() + 1;
+                        var day = dtToday.getDate();
+                        var year = dtToday.getFullYear();
+
+                        if (_i === day) { _addClass = ' class="selected"'; }
+                        document.write('<li><a href="#" title="' + _i + '" data-value="' + _i + '"' + _addClass + '>' + _i + '</a></li>');
+                    }
+                </script>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

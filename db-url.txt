@@ -1,0 +1,1 @@
+mongodb+srv://dbUser:zruN2JJmDfrb4mEs@cluster0.ibdil.mongodb.net/cps731?retryWrites=true&w=majority

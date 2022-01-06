@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="siteview" content="width=device-width, initial-scale=1">
+<style>
+body
+{
+    background-color: #ffddab;
+    padding: 30px;
+    
+}
+.h1  
+{
+    font-family: Verdana, Helvetica, san-serif;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    
+}
+.h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.75em;
+    text-align: center;
+}
+.p1
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.45em;
+    text-align: center;
+}
+.content 
+{
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.container
+{
+    border: 3px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    background: #8fbc8f;
+    box-shadow: 5px 10px 8px #888888;
+}
+.container2
+{
+    border: 3px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    background: #729672;
+    box-shadow: 5px 10px 8px #888888;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#expense">Expense Tracker</a>
+        <a href="#budget">Budget</a>
+        <a href="#Account">Account Profile</a>
+        <a href="#Notifiy">Notifications</a>
+        <a href="#active">Bill + Tips Splitter</a>
+        <a href="#Recommend">Recommendations</a>
+        <a href="#tutorial">Tutorials</a>
+</div>
+
+<div class="content">
+
+<h class="h1">Bill & Tip Splitter</h1>
+
+<br>
+<br>
+<div class="container">
+
+<h class="h2">Bill Splitter</h1>
+<br>
+<p class="p1">Calculate your portion of the bill with this calculator</p1>
+
+<form oninput="x.value=parseFloat(a.value)/parseFloat(b.value)">
+<input type="text" id="a" placeholder="Total Bill">
+<br>
+<input type="text" id="b" placeholder="Total People">
+<br>
+<p class="p1">The individual bill will be $<output name="x" for="a b"></output></p1>
+<br>
+<br>
+</div>
+<br>
+</form>
+
+</body>
+
+
+
+
+<body>
+<div class="container2">
+
+<h class="h2">Tip Splitter</h1>
+<br>
+<p class="p1">Figure out exactly how much you want to tip. In Canada, the average tip is 15-20%.</p1>
+
+<form oninput="x.value=parseFloat(a.value)*(parseFloat(b.value)/100)">
+<input type="text" id="a" placeholder="Bill Cost">
+<br>
+<input type="text" id="b" placeholder="Tip Percentage">
+<br>
+<p class="p1">You should Tip $<output name="x" for="a b"></output></p1>
+<br>
+<br>
+</form>
+</div>
+</div>
+
+</body>
+
+
+
+</html>

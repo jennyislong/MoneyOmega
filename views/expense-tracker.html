@@ -1,0 +1,380 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <div class="topnav">
+    <a class="active" href="/homePage">Home</a>
+    <a href="/expense-tracker">Expense Tracker</a>
+    <a href="/budget">Budget</a>
+    <a href="/accountProfile">Account Profile</a>
+    <a href="/payment-notif">Notifications</a>
+    <a href="/BillTipSplitter">Bill + Tips Splitter</a>
+    <a href="/recommendation">Recommendations</a>
+    <a href="/Tutorial">Tutorials</a>
+        <form method="post" action="logout">
+        <input style="margin-top:15px;" type="submit" value="log out">
+        </form>
+</div>
+
+<div class="border">
+    <header style="font-size: xx-large;">Expenses Tracker</header>
+    <br><br>
+    <div class="grid">
+        <div>
+            <h2>Expenses</h2>
+            <p>
+            <form method="post">
+                <label>Type:</label>
+                <input name="text" id="exptype" />
+                <br><br>
+                <label>Amount:</label>
+                <input name="number" type="number" id="amount">
+                <br><br>
+                <br>
+                <br>
+                <button onclick="savee()">Save</button>
+                <br>
+                <br>
+                <p id="demo1"></p>
+                <p id="largest"></p>
+                <script>
+                    let sum = 0;
+                    let largestValue = 0;
+                    largest = "";
+                    function savee() {
+                        if (document.getElementById("amount").value == "" || document.getElementById("amount").value == 0) {
+                            document.getElementById("demo1").innerHTML = "Please input an amount";
+                        }
+                        else if (document.getElementById("exptype").value == "" || document.getElementById("exptype").value == 0) {
+                            document.getElementById("demo1").innerHTML = "Please input a type";
+                        }
+                        else {
+                            let amt = parseInt(document.getElementById("amount").value);
+                            sum = sum + amt;
+                            if (sum == 0) {
+                                largestValue = parseInt(document.getElementById("amount").value);
+                                largest = document.getElementById("exptype").value;
+                            }
+                            else {
+                                let amount = parseInt(document.getElementById("amount").value);
+                                var exptype = document.getElementById("exptype").value;
+                                if (amount > largestValue) {
+                                    largestValue = amount;
+                                    largest = exptype;
+                                }
+                            }
+                            document.getElementById("demo1").innerHTML = "The Total Expenses will be:  $" + sum;
+                            document.getElementById("largest").innerHTML = "The Largest Expense is:  $" + largestValue + ", Type: " + largest;
+                        }
+                        amount.value = "";
+                    }
+                </script>
+            </form>
+            </p>
+        </div>
+        <div>
+            <h2>Income</h2>
+            <form method="post">
+                <p>
+                    <label>Type:</label>
+                    <input name="text" id="inctype" />
+                    <br><br>
+                    <label>Amount:</label>
+                    <input name="number" type="number" id="incamount">
+                    <br><br>
+                    <br>
+                    <button onclick="calculatei()">Save</button>
+                    <br>
+                    <br>
+                <p id="demo2"></p>
+                <p id="largestinc"></p>
+                <script>
+                    let incsum = 0;
+                    let inclargestValue = 0;
+                    inclargest = "";
+                    function calculatei() {
+                        if (document.getElementById("incamount").value == "" || document.getElementById("incamount").value == 0) {
+                            document.getElementById("demo2").innerHTML = "Please input an amount";
+                        }
+                        else if (document.getElementById("inctype").value == "" || document.getElementById("inctype").value == 0) {
+                            document.getElementById("demo2").innerHTML = "Please input a type";
+                        }
+                        else {
+                            let incamt = parseInt(document.getElementById("incamount").value);
+                            incsum = incsum + incamt;
+                            if (incsum == 0) {
+                                inclargestValue = parseInt(document.getElementById("incamount").value);
+                                inclargest = document.getElementById("inctype").value;
+                            }
+                            else {
+                                let incamount = parseInt(document.getElementById("incamount").value);
+                                var inctype = document.getElementById("inctype").value;
+                                if (incamount > inclargestValue) {
+                                    inclargestValue = incamount;
+                                    inclargest = inctype;
+                                }
+                            }
+                            document.getElementById("demo2").innerHTML = "The Total Income will be:  $" + incsum;
+                            document.getElementById("largestinc").innerHTML = "The Largest Income is:  $" + inclargestValue + ", Type: " + inclargest;
+
+                        }
+                        incamount.value = "";
+                    }
+                </script>
+                </p>
+            </form>
+        </div>
+        <div>
+            <h2>Loans</h2>
+            <form method="post">
+                <p>
+                    <label>Type:</label>
+                    <input name="text" id="ltype" />
+                    <br><br>
+                    <label>Amount:</label>
+                    <input name="number" type="number" id="lamount">
+                    <br><br>
+                    <br>
+                    <button onclick="calculatel()">Save</button>
+                    <br>
+                    <br>
+                <p id="demo7"></p>
+                <p id="largestl"></p>
+                <script>
+                    let lsum = 0;
+                    let llargestValue = 0;
+                    llargest = "";
+                    function calculatel() {
+                        if (document.getElementById("lamount").value == "" || document.getElementById("lamount").value == 0) {
+                            document.getElementById("demo7").innerHTML = "Please input an amount";
+                        }
+                        else if (document.getElementById("ltype").value == "" || document.getElementById("ltype").value == 0) {
+                            document.getElementById("demo7").innerHTML = "Please input a type";
+                        }
+                        else {
+                            let lamt = parseInt(document.getElementById("lamount").value);
+                            lsum = lsum + lamt;
+                            if (lsum == 0) {
+                                llargestValue = parseInt(document.getElementById("lamount").value);
+                                llargest = document.getElementById("ltype").value;
+                            }
+                            else {
+                                let lamount = parseInt(document.getElementById("lamount").value);
+                                var ltype = document.getElementById("ltype").value;
+                                if (lamount > llargestValue) {
+                                    llargestValue = lamount;
+                                    llargest = ltype;
+                                }
+                            }
+                            document.getElementById("demo7").innerHTML = "The Total Loans will be:  $" + lsum;
+                            document.getElementById("largestl").innerHTML = "The Largest Loan is:  $" + llargestValue + ", Type: " + llargest;
+                        }
+                        incamount.value = "";
+                    }
+                </script>
+                </p>
+            </form>
+        </div>
+        <div>
+            <h2>Investment Growth</h2>
+            <form method="post">
+                <p>
+                    <label>Amount:</label>
+                    <input name="inv-amount" type="number" id="invamount" />
+                    <br><br>
+                    <label>Return Rate:</label>
+                    <input name="r-rate" type="number" id="rrate">
+                    <br><br>
+                    <label>Grow Time (years):</label>
+                    <input name="g-time" type="number" id="gtime">
+                    <br><br>
+                    <label>Compound Rate:</label>
+                    <input name="c-rate" type="number" id="crate">
+                    <br><br>
+                    <br>
+                    <br>
+                    <button onclick="calculateig()">Calculate</button>
+                    <br>
+                    <br>
+                <p id="demo3"></p>
+                <br>
+                <script>
+                    function calculateig() {
+                        var invamount = document.getElementById("invamount").value;
+                        var rrate = document.getElementById("rrate").value;
+                        var gtime = document.getElementById("gtime").value;
+                        var crate = document.getElementById("crate").value;
+                        var invgrowth = 0;
+                        var invtotal = 0;
+                        if (invamount == "" || rrate == "" || gtime == "" || crate == "") {
+                            document.getElementById("demo3").innerHTML = "Please input amount(s)";
+                        }
+                        else {
+                            if (crate < 1) {
+                                invgrowth = invamount * (1 + (rrate / 100 * gtime)) - invamount;
+                            }
+                            else {
+                                z = invamount * (1 + ((rrate) / (crate / 100)));
+                                invgrowth = Math.pow(z, (gtime * (crate / 100)));
+                            }
+                            document.getElementById("demo3").innerHTML = "The Investment Growth will be:  $" + invgrowth;
+                        }
+                    }
+                </script>
+                </p>
+            </form>
+        </div>
+        <div>
+            <h2>Retirement Savings</h2>
+            <form method="post">
+                <p>
+                    <label>Current Age:</label>
+                    <input name="c-age" type="number" id="cage" />
+                    <br><br>
+                    <label>Retirement Age:</label>
+                    <input name="r-age" type="number" id="rage">
+                    <br><br>
+                    <label>Retirement Savings:</label>
+                    <input name="r-savings" type="number" id="rsavings">
+                    <br><br>
+                    <label>Current Income:</label>
+                    <input name="c-inc" type="number" id="cinc">
+                    <br><br>
+                    <br>
+                    <br>
+                    <button onclick="calculaters()">Calculate</button>
+                    <br>
+                    <br>
+                <p id="demo5"></p>
+                <br>
+                <p id="demo6"></p>
+                <script>
+                    function calculaters() {
+                        var cage = document.getElementById("cage").value;
+                        var rage = document.getElementById("rage").value;
+                        var rsavings = document.getElementById("rsavings").value;
+                        var cinc = document.getElementById("cinc").value;
+                        if (cage == "" || rage == "" || rsavings == "" || cinc == "") {
+                            document.getElementById("demo5").innerHTML = "Please input amount(s)";
+                        }
+                        else {
+                            var x = 82 - rage //avgerage life - retirement age 
+                            var y = cinc * (0.7) //70% of current income 
+                            var totalfunds = x * y - rsavings
+                            var years = rage - cage //retirement age - current age 
+                            var final = totalfunds / years
+
+                            document.getElementById("demo5").innerHTML = "The Total Retirement Savings will be:  $" + totalfunds;
+                            document.getElementById("demo6").innerHTML = "The Annual Retirement Savings should be:  $" + final;
+                        }
+                    }
+                </script>
+                </p>
+            </form>
+        </div>
+        <div>
+            <h2>Interest</h2>
+            Interest Rate: <input type="number" id="myNumber" placeholder="Interest Rate">
+            <br>
+            <br>
+            Starting Principal: <input type="number" id="myNumber2" placeholder="Starting Principal">
+            <br>
+            <br>
+            Compound Periods (per year): <input type="number" id="myNumber3" placeholder="Compound Periods">
+            <br>
+            <br>
+            Time (years): <input type="number" id="myNumber4" placeholder="Time (years)">
+            <br>
+            <br>
+            <button onclick="calculate()">Calculate</button>
+            <br>
+            <br>
+            <p id="demo8"></p>
+            <br>
+            <p id="demo9"></p>
+            <script>
+                function calculate() {
+                    var a = document.getElementById("myNumber").value;
+                    var b = document.getElementById("myNumber2").value;
+                    var c = document.getElementById("myNumber3").value;
+                    var d = document.getElementById("myNumber4").value;
+
+                    if (a == "" || b == "" || c == "" || d == "") {
+                        document.getElementById("demo8").innerHTML = "Please input amount(s)";
+                    }
+                    else {
+                        var x = (a / 100 / c) + 1;
+                        var y = c * d;
+                        var z = Math.pow(x, y);
+                        var f = b * z
+                        var i = f - b
+
+                        document.getElementById("demo8").innerHTML = "The Final balance will be:  $" + f;
+                        document.getElementById("demo9").innerHTML = "The Total interest will be:  $" + i;
+                    }
+                }
+            </script>
+            </p>
+            </form>
+        </div>
+        <div>
+            <h2>Exchange Rate Conversion</h2>
+            <form method="post">
+                <p>
+                    <label>CAD:</label>
+                    <input name="cad" type="number" id="cad" />
+                    <br><br>
+                    <label>USD:</label>
+                    <input name="usd" type="number" id="usd">
+                    <br><br>
+                    <br>
+                    <button onclick="calculateer()">Calculate</button>
+                    <br>
+                    <br>
+                <p id="demo10"></p>
+                <script>
+                    function calculateer() {
+                        var cad = document.getElementById("cad").value;
+                        var usd = document.getElementById("usd").value;
+
+                        if (cad == null || cad == "") {
+                            if (usd == null || usd == "") {
+                                document.getElementById("demo10").innerHTML = "Please input an amount";
+                            }
+                            else {
+                                document.getElementById("demo10").innerHTML = "CAD:  $" + usd * 1.2821;
+                            }
+                        }
+                        if (usd == null || usd == "") {
+                            if (cad == null || cad == "") {
+                                document.getElementById("demo10").innerHTML = "Please input an amount";
+                            }
+                            else {
+                                document.getElementById("demo10").innerHTML = "USD:  $" + cad * 0.78;
+                            }
+                        }
+                    }
+                </script>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .border {
+        background-color: rgb(247, 218, 202);
+        margin-right: 10%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, auto));
+        grid-gap: 20px;
+    }
+
+    .grid>div {
+        background-color: #f5a860;
+        padding: 10px;
+    }
+    
+</style>

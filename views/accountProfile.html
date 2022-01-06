@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<center>
+<html>
+  <head>
+  <style>
+    #example1 {
+      padding-bottom: 15px;
+      background: #ffddab;
+      margin-left: 230px;
+      margin-right: 230px;
+    } 
+    </style>
+  <title>Account Profile</title> 
+  
+<body style="background-color:darkseagreen;">
+
+  <link rel='stylesheet' href='accountprofile.css' />
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#expense">Expense Tracker</a>
+    <a href="#budget">Budget</a>
+    <a href="#Account">Account Profile</a>
+    <a href="#Notifiy">Notifications</a>
+    <a href="#Notifiy">Bill + Tips Splitter</a>
+    <a href="#Recommend">Recommendations</a>
+    <a href="#tutorial">Tutorials</a>
+</div>
+
+<div id="example1">
+<h1>My Info</h1>
+<img src="user_profile_avatar.png" width="150" height="100"><br></br>
+
+<div class="mainTable">
+  <table id="table">
+      
+      <tr>
+          <th></th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+          <th>Email</th>
+      </tr>
+      
+      <tr>
+          <td></td>
+          <td>Mic</td>
+          <td>Davidson</td>
+          <td>mic</td>
+          <td>mic@fake.com</td>
+      </tr>
+      
+      
+  </table>
+</div><br></br>
+
+  <label for="fname">First Name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last Name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+
+</form><br></br>
+<h1>Change Password</h1><br></br>
+<label for="CurrentPassword">Password:</label><input type="password" value="" id="myInput"><br><br>
+<label for="NewPassword">Change Password:</label><input type="password" value="" id="myInput"><br><br>
+<label for="ConfirmPassword">Confirm:</label><input type="password" value="" id="myInput"><br><br>
+  
+
+<input type="submit" value="Update"></div>
+</center>
+<script src="script.js"></script>
+</body>
+</html>

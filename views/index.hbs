@@ -1,0 +1,47 @@
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#expense">Expense Tracker</a>
+        <a href="#budget">Budget</a>
+        <a href="#Account">Account Profile</a>
+        <a href="#Notifiy">Notifications</a>
+        <a href="#Notifiy">Bill + Tips Splitter</a>
+        <a href="#Recommend">Recommendations</a>
+        <a href="#tutorial">Tutorials</a>
+    </div> <!-- these href are not set yet (not sure if do it this way or redirect like the labs) -->
+
+<body>
+<div class ="list-content"> 
+
+<p> <i>NOTE:</i> this is from the lab 
+most likely want to change <b>index.hbs</b> to be the <b>home page</b> <br>
+We can use these form layouts for the calculators.
+We just need to create separate &lt;divs&gt; for each of the calculation components 
+and store a class name for each and use those variables to create functions in node.js.
+</p>
+
+<h1>Welcome {{username}}!</h1>
+
+<form class="item-list"method="post">
+    <ul>
+        {{#each items}} 
+        <li> <div class="item-text">{{this}}</div> <button class="input-button" name="delete" value="{{this}}" type ="submit"> Delete</button> </li>
+        {{/each}}
+       </ul>
+</form> 
+
+<form method="post">
+<input class= "input-field" name="text" placeholder="Add new item">
+<input class="input-button" type="submit" value="Add">
+</form>
+<!-- We can add this code again but put place holder as the value we want
+and store the name as the varibale name
+-->
+
+<br>
+
+<form method="post" action="logout">
+    <input class="input-button" type="submit" value="log out">
+</form>
+
+</div>
+</body>

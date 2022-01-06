@@ -1,0 +1,145 @@
+
+body{
+  margin: 0;
+  background-color: #ffddab;
+}
+
+
+.logo{
+    overflow: hidden;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ffddab; 
+  color: #fd9a17;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.input-field{
+  background: lightgray;
+  padding: 7px;
+  font-size: 16px;
+  outline: 0;
+  border: 1px solid rgb(208,208,208);
+  margin-bottom: 20px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+}
+form{
+  width: 500px;
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+
+}
+
+
+.input-button{
+  background: black;
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  font-size: 15px;
+  width: 90px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin:0;
+  transition: all 50ms; /* animation */
+}
+
+.input-button:hover{
+  background:#7ccc92;
+  color: #2c733f;
+}
+ 
+.registerForm{
+  border: 2px solid  rgb(39, 38, 38);
+  border-radius:5px;
+  box-shadow: 15px 15px 10px #fdaf5d;
+  margin: 100px auto;
+  justify-content:center;
+  align-items:center; 
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.sub-button{
+  padding-top:20px;
+}
+
+/*-------------------- Pop up box for terms and conditions--------------*/
+  /*POP UP BOX*/
+.popup {
+  margin: 80px auto;
+  padding-top: 40px;
+  background: #fff;
+  border-radius: 5px;
+  width: 60%;
+  position: relative;
+  transition: all 1s ease-in-out;
+  /*
+  margin-top:250px; /*MOVE POP UP BOX MIDDLE OF PAGE*/
+    
+  }
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #04AA6D;
+}
+.popup .content {
+  max-height:70vh !important;
+  overflow-y: scroll !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom:20px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}

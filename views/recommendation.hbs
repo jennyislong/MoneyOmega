@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='/stylesheets/recommendation.css' />
+
+    <!-- ICON for Browser tab -->
+    <link rel="icon" type="image/png" href="../public/images/budget-icon2.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="../public/images/budget-icon2.png" sizes="32x32">
+
+    <link rel='stylesheet' href='../public/stylesheets/recommendation.css' />
+
+    <title>Money Ωmega</title> <!-- remove this later-->
+    <script type="text/javascript" src ='/javascripts/recommendations.js'></script>
+</head>
+
+<body>
+
+<!-- Navigation bar 
+- this can be applied to other pages too
+--> 
+  <div class="topnav">
+    <a class="active" href="/homePage">Home</a>
+    <a href="/expense-tracker">Expense Tracker</a>
+    <a href="/budget">Budget</a>
+    <a href="/accountProfile">Account Profile</a>
+    <a href="/payment-notif">Notifications</a>
+    <a href="/BillTipSplitter">Bill + Tips Splitter</a>
+    <a href="/recommendation">Recommendations</a>
+    <a href="/Tutorial">Tutorials</a>
+        <form method="post" action="logout">
+        <input style="margin-top:15px;" type="submit" value="log out">
+        </form>
+</div>
+
+    <div class="header">
+    <h1>Investment Recommendations</h1>
+    <p>Please select the informations and click submit to get a recommended Investment Product</p>
+    </div>
+
+    <form class = "recommendForm" name="recommendForm">
+        <h3> Please Select your Risk level</h3>
+            <label for="low">Low</label>
+            <input type="checkbox" name="risk" value="low">            
+                        
+            <label for="medium">medium</label>
+            <input type="checkbox" name="risk" value="medium">            
+            
+            <label for="high">high</label>
+            <input type="checkbox" name="risk" value="high">
+
+            <!-- USERS CAN PICK SELECT either one option or two
+                i.e. low risk, low to medium risks
+            -->
+
+        <h3> How long would you like to invest?</h3>
+            <label for="short">Short term</label>
+            <input type="radio" name="time" value="short">            
+            
+            <label for="medium">Medium term</label>
+            <input type="radio" name="time" value="medium">            
+            
+            <label for="long">Long term</label>
+            <input type="radio" name="time" value="long">
+        
+    <!-- DOUBLE CHECK AMOUNT-->
+        <h3>How much would you like to invest?</h3>
+                <select name="Amount" id="Amount" > 
+                    <option value="low">0-1000</option>
+                    <option value="mid">1000-5000</option>
+                    <option value="high">5000-10000</option>
+                    <option value="higher">10000+</option>
+                </select>
+    
+        <h3>Select your Experience with Investing</h3>
+                <select name="experience"> 
+                    <option value="None">None</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Experienced">Experienced</option>
+                </select>
+            <br>
+
+        <div class="sub-button"> 
+            <input class="input-button" type='submit' onclick='check();return false'>
+            <button class="input-button" type="button" onclick='document.location.reload(true)'>Restart</button>
+        </div>
+        <!-- return false: after function to stop page from refreshing-->
+    </form>
+
+    <!-- <p>Recommended Investment: </p> -->
+    <div id ='recommend' style="display:none"></div>
+
+</body>
+</html>
+

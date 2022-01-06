@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="siteview" content="width=device-width, initial-scale=1">
+<style>
+body
+{
+    background-color: #ffddab;
+    margin: 0;
+    
+}
+.h1  
+{
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    
+}
+.h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+.p1
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.45em;
+    text-align: center;
+}
+.content 
+{
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.container
+{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: #8fbc8f;
+    box-shadow: 5px 10px 8px #888888;
+}
+.container2
+{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: #729672;
+    box-shadow: 5px 10px 8px #888888;
+}
+.modal
+{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.article
+{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ffddab; 
+  color: #fd9a17;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a class="active" href="/homePage">Home</a>
+    <a href="/expense-tracker">Expense Tracker</a>
+    <a href="/budget">Budget</a>
+    <a href="/accountProfile">Account Profile</a>
+    <a href="/payment-notif">Notifications</a>
+    <a href="/BillTipSplitter">Bill + Tips Splitter</a>
+    <a href="/recommendation">Recommendations</a>
+    <a href="/Tutorial">Tutorials</a>
+        <form method="post" action="logout">
+        <input style="margin-top:15px;" type="submit" value="log out">
+        </form>
+</div>
+
+<div class="content">
+
+<h class="h1">Tutorials</h1>
+<br>
+<h class="p1">Learn how to save & invest</p1>
+
+<br>
+<br>
+<div class="container">
+
+<h class="h2">Articles</h2>
+<br>
+<p class="p1">View our various articles, written by industry professionals. New content is added every week!</p1>
+
+<br>
+<br>
+
+<button id="article1btn">View Article 1</button>
+
+<div id="article1Modal" class="modal">
+	<div class="article">
+        <p>Example Financial Article 1</p>
+        <p class="p1">Click anywhere outside the article in order to return to the website.</p1>
+        <p class="p1">I don't know anything about Finances so I will now insert some example text to fill out the rest of this article.</p1>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in libero nec libero maximus ullamcorper eget et ligula. Suspendisse maximus nisl sed porta tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin sit amet elit lectus. Morbi ac urna semper, commodo nisl sit amet, dapibus dolor. Proin nisl tortor, consequat in condimentum ut, cursus vulputate lorem. Vivamus at mauris sollicitudin, dapibus sapien ut, rutrum felis. Donec non fringilla ipsum. Nullam eget luctus diam. Cras ut laoreet ex. Ut a dapibus magna, non ullamcorper magna. Aliquam venenatis accumsan orci et accumsan. Etiam dignissim neque eros. Aenean tempus sem iaculis lacinia congue. Maecenas id mollis neque.</p1>
+        <p class ="p1">Mauris varius accumsan tempor. Mauris sapien nisi, ornare maximus libero nec, facilisis rhoncus urna. In urna urna, efficitur et eleifend a, venenatis non nulla. Fusce fringilla nisl a nulla pretium, a dictum turpis accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nec suscipit lorem. Aenean vestibulum, lorem nec volutpat commodo, augue elit fermentum orci, eget mollis odio lorem sit amet lorem. Pellentesque sem ligula, ullamcorper ut auctor at, tristique sit amet turpis. Aliquam hendrerit bibendum porttitor. Integer ac suscipit ante, et venenatis lorem. Duis ut ullamcorper massa, quis tempor eros. Aenean ac ante metus. Proin rutrum et metus non pretium. Vivamus pellentesque justo in lorem vestibulum vestibulum. Aliquam mattis condimentum risus eget ultricies.</p1>
+        
+    </div>
+<br>
+</div>
+
+<button id="article2btn">View Article 2</button>
+<div id="article2Modal" class="modal">
+	<div class="article">
+    <p>Example Financial Article 2</p>
+    <p class="p1">Click anywhere outside the article in order to return to the website.</p1>
+    <p class="p1">I don't know anything about Finances so I will now insert some example text to fill out the rest of this article.</p1>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia ex vitae placerat fringilla. Curabitur eu tincidunt est, vitae dictum risus. Aenean a diam ultricies, sodales elit et, malesuada nisl. Curabitur ultrices diam neque, in faucibus nulla eleifend nec. Suspendisse potenti. Nullam eget augue ac orci aliquam rutrum feugiat id eros. Vivamus non tellus et lectus egestas fermentum. Fusce lacus ex, laoreet ut metus quis, interdum blandit velit. Donec augue libero, pulvinar id libero quis, rutrum luctus mi. Sed at lacus nec metus pulvinar molestie vitae in purus. Pellentesque cursus purus et magna rutrum, eget vestibulum eros tempor. Sed mollis ultrices pulvinar.</p1>
+    <p class="p1">Praesent a volutpat justo, ut vestibulum nunc. Pellentesque hendrerit est dignissim, lacinia dolor scelerisque, scelerisque turpis. In accumsan aliquam neque, vel ultricies justo placerat rhoncus. Nulla facilisi. Donec molestie feugiat porta. In et eros finibus, vulputate urna tempor, finibus nunc. Donec accumsan ligula justo, quis auctor tellus tincidunt eu. Donec eget nisl imperdiet, suscipit libero sit amet, tempor urna. Vestibulum sed nisi nibh. Integer convallis dui non leo viverra tempus id vitae ex.</p1>
+    <p class="p1">In eu ipsum non odio suscipit vulputate. Phasellus ac fermentum tellus, sed vestibulum eros. Duis dapibus, elit quis sagittis dapibus, turpis dui aliquam enim, sed rutrum ex tortor eu justo. Pellentesque eu sollicitudin nulla, vitae blandit augue. Proin quis consequat nisl. Aliquam velit nulla, pellentesque vitae erat et, eleifend tincidunt mi. Donec lorem massa, vehicula dapibus condimentum eget, molestie a mi. Curabitur ullamcorper, ipsum sit amet ultricies tempus, nulla ante tristique elit, eget consequat nisi nunc sollicitudin enim. Mauris hendrerit rutrum efficitur. Nulla facilisi. Vestibulum fringilla ornare enim, ac bibendum nibh aliquam ut. Donec convallis lectus a purus tincidunt facilisis. Aliquam tincidunt blandit sem a ultricies. Nam auctor, sapien in rutrum hendrerit, arcu diam posuere purus, vel sagittis metus enim finibus erat. Nunc lacus nisi, tincidunt efficitur dolor et, maximus iaculis erat.</p1>
+
+	</div>
+<br>
+</div>
+<br>
+<br>
+</div>
+
+<br>
+
+<div class="container2">
+<h class="h2">Videos</h2>
+<br>
+<p class="p1">View our various video tutorials and guides. New videos are added frequently!</p1>
+<br>
+<br>
+<br>
+<p class="p1">Video Tutorial 1</p1>
+<br>
+<br>
+<video width="400" controls>
+  <source src="video/video1.mp4" type="video/mp4">
+  Your current browser does not support HTML video. Please use an alternative browser in order to view our videos.
+</video>
+
+<br>
+<br>
+<br>
+<p class="p1">Video Tutorial 2</p1>
+<br>
+<br>
+<video width="400" controls>
+  <source src="video/video2.mp4" type="video/mp4">
+  Your current browser does not support HTML video. Please use an alternative browser in order to view our videos.
+</video>
+
+</div>
+
+<script>
+article1btn.onclick = function() 
+{
+  article1Modal.style.display = "block";
+}
+
+window.onclick = function(event) 
+{
+  if (event.target == article1Modal) 
+  {
+    article1Modal.style.display = "none";
+  }
+  if (event.target == article2Modal)
+  {
+  	article2Modal.style.display = "none";
+  }
+}
+
+// Article 2
+
+article2btn.onclick = function() 
+{
+  article2Modal.style.display = "block";
+}
+</script>
+
+<br>
+</form>
+
+</body>
